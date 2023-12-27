@@ -1,0 +1,60 @@
+/* index.css */
+
+.publication-card {
+    width: 381px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Tambahkan ini */
+    justify-content: center; /* Tambahkan ini */
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex; /* Tambahkan ini */
+    flex-direction: column; /* Tambahkan ini */
+    align-items: center; /* Tambahkan ini */
+    justify-content: center; /* Tambahkan ini */
+  }
+
+  .caption h3 {
+    font-size: 17px;
+    font-weight: 300;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 5px;
+  }
+  
+  .caption p {
+    font-size: 13px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+  
+  .publication-card:hover .caption {
+    opacity: 1;
+  }
+  
