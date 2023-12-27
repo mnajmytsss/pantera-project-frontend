@@ -4,16 +4,15 @@
     height: 422px;
     position: relative;
     overflow: hidden;
-    transition: box-shadow 0.3s;
     border-radius: 42px;
 }
 
 .image {
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    object-fit: cover;
+    border-radius: 42px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .caption {
@@ -26,12 +25,27 @@
     font-size: 18px;
     text-align: center;
     justify-content: center;
+    z-index: 2; /* Letakkan caption di depan gambar */
+    transition: background 0.3s;
+}
+
+.image-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%; /* Sesuaikan dengan tinggi gradient yang diinginkan */
+    z-index: 1; /* Letakkan gradient di depan gambar */
+    background: linear-gradient(to bottom, transparent, rgba(0, 90, 91, 0.7));
+    opacity: 0; /* Sembunyikan gradient secara default */
+    transition: opacity 0.3s;
+}
+
+.image-card:hover::before {
+    opacity: 1; /* Tunjukkan gradient ketika dihover */
 }
 
 .image-card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-.image-card:hover {
-    color: linear-gradient(to bottom, transparent, rgba(0, 90, 91, 0.7));
 }
