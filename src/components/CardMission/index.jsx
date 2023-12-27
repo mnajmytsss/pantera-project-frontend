@@ -5,7 +5,7 @@ import "./index.css"
 const ImageCard = () => {
   return (
     <div className="image-card">
-      <div className="image" style={{ backgroundImage: `url(${pabji})` }} />
+      <img className="image" src={pabji} alt="Sustainable Landscape Management" />
       <div className="caption">Sustainable Landscape Management</div>
     </div>
   );
