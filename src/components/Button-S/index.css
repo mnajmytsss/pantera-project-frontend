@@ -1,0 +1,15 @@
+.custom-button-s {
+    background-color: #005A5B; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 42px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    font-size: 10px;
+  }
+  
+  .custom-button-s:hover {
+    background-color: #014138; 
+  }
+  

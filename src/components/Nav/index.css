@@ -1,0 +1,201 @@
+/* index.css */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 11vh;
+    background: linear-gradient(to bottom, #003840, transparent);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .logo img {
+    width: 20vh;
+    height: auto;
+  }
+
+  .sidebar-only {
+    display: none; 
+}
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-link {
+    color: #ffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+    padding: 0 10px
+  }
+  
+  .nav-link:hover {
+    color: #ffc107;
+  }
+  
+  .burger-icon {
+    display: none; 
+    cursor: pointer;
+  }
+  
+  .line {
+    height: 3px;
+    width: 25px;
+    background-color: #ffff;
+    margin: 5px 0;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 8vh;
+        background: linear-gradient(to bottom, #003840, transparent);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .nav-link {
+        color: #ffff;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 0.8rem;
+        transition: color 0.3s;
+      }
+
+      .logo img {
+        width: 15vh;
+        height: auto;
+      }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 7vh;
+        background: linear-gradient(to bottom, #003840, transparent);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .nav-link {
+        color: #ffff;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 0.8rem;
+        transition: color 0.3s;
+      }
+
+      .logo img {
+        width: 13vh;
+        height: auto;
+      }
+  }
+  
+
+ /* Tampilan responsif pada layar kecil */
+@media only screen and (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 45%;
+        height: 100vh;
+        background: #003840;
+        transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        font-size: 1rem;
+      }
+  
+    .nav-links.mobile-open {
+        display: flex;
+        right: 0;
+      }
+    
+    .links {
+        display: flex;
+        flex-direction: column;
+        margin-top: 6vh;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .nav-links.mobile-open .sidebar-only {
+        display: block; /* Ditampilkan hanya ketika sidebar terbuka */
+    }
+
+    .social-links {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .social-link {
+        color: #ffff;
+        text-decoration: none;
+        font-size: 0.8rem;
+        transition: color 0.3s;
+    }
+
+    .copyright {
+        color: #ffff;
+        font-size: 0.8rem;
+    }
+
+    .svg-icon {
+        border: 1px solid white; /* Memberikan border putih dengan ketebalan 1 pixel */
+        border-radius: 7px; /* Memberikan sudut lembut pada border */
+        padding: 3px; /* Memberikan ruang antara border dan ikon SVG */
+        background-color: rgba(255, 255, 255, 0.2); /* Memberikan warna putih transparan */
+        margin: 0 4px
+    }
+
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .nav-link {
+      color: #ffff;
+      text-decoration: none;
+      margin: 20px 0;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+  
+    .burger-icon {
+      display: block;
+      cursor: pointer;
+    }
+
+    .burger-icon.hide {
+        z-index: -1;
+      }
+}
+  

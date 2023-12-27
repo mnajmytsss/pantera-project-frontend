@@ -1,0 +1,11 @@
+
+.custom-tag {
+    background-color: #fff; /* Warna latar belakang */
+    color: #081420; /* Warna teks */
+    padding: 10px 20px;
+    border-radius: 2px; /* Radius sudut */
+    display: inline-block; /* Elemen div akan tampil seperti inline */
+    transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang */
+    font-size: 10px;
+  }
+  
