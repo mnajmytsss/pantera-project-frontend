@@ -8,7 +8,7 @@ import CustomTag from '../Tag';
 import { CardActionArea, CardActions } from '@mui/material';
 import './HighlightCard.css';
 
-export default function MultiActionAreaCard({ title, description, image, customTagLabel }) {
+export default function HighlightCard({ title, description, image, customTagLabel, onButtonClick }) {
   return (
     <Card
       className="custom-card"
@@ -30,7 +30,7 @@ export default function MultiActionAreaCard({ title, description, image, customT
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <ButtonS label="Read More" />
+        <ButtonS label="Read More" onClick={onButtonClick} />
       </CardActions>
     </Card>
   );
