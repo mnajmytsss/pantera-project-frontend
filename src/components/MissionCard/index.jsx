@@ -5,7 +5,7 @@ const MissionCard = ({ image, caption }) => {
   return (
     <div className="image-card">
       <img className="image" src={image} alt={caption} />
-      <div className="caption">{caption}</div>
+      <div className="captionMission">{caption}</div>
     </div>
   );
 };
