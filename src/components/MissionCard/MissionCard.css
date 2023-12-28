@@ -1,10 +1,10 @@
 /* ImageCard.css */
 .image-card {
-    width: 242px;
+    width: 220px;
     height: 422px;
     position: relative;
     overflow: hidden;
-    border-radius: 2px;
+    border-radius: 10px;
 }
 
 .image {
@@ -15,18 +15,19 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.caption {
+.captionMission {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
     padding-bottom: 30px;
     color: white;
     font-size: 18px;
     text-align: center;
     justify-content: center;
-    z-index: 2; /* Letakkan caption di depan gambar */
+    z-index: 2; 
     transition: background 0.3s;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .image-card::before {
@@ -35,15 +36,15 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 70%; /* Sesuaikan dengan tinggi gradient yang diinginkan */
-    z-index: 1; /* Letakkan gradient di depan gambar */
+    height: 70%; 
+    z-index: 1; 
     background: linear-gradient(to bottom, transparent, rgba(0, 90, 91, 0.7));
-    opacity: 0; /* Sembunyikan gradient secara default */
+    opacity: 0; 
     transition: opacity 0.3s;
 }
 
 .image-card:hover::before {
-    opacity: 1; /* Tunjukkan gradient ketika dihover */
+    opacity: 1; 
 }
 
 .image-card:hover {
